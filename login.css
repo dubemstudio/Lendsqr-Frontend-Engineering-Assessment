@@ -101,6 +101,13 @@ main{
   font-family: "Roboto", sans-serif;
   transform: translateY(-50%);
   pointer-events: none;
+  transition: opacity .5s ease-in-out;
+  opacity: 1;
+}
+
+.login-form input:focus~label,
+.login-form input:valid~label{
+  opacity: 0;
 }
 
 .input-box input{
@@ -127,6 +134,7 @@ main{
   font-size: 12px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
 .login-form .forgot-psw{
@@ -154,4 +162,10 @@ main{
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Roboto", sans-serif;
+  transition: transform .5s ease-in-out;
+  cursor: pointer;
+}
+
+.login-form .btn:hover{
+  background-color: #2FB3B2;
 }
