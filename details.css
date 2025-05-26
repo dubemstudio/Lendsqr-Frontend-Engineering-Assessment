@@ -1,0 +1,241 @@
+.dashboard-main{
+  padding: 60px 60px 100px;
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow: scroll;
+}
+
+.dashboard-main::-webkit-scrollbar{
+  display: none;
+}
+
+.dashboard-main .to-user{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.to-user span{
+ color: #545F7D;
+ font-size: 16px;
+ font-weight: 400;
+ font-family: "Work Sans", sans-serif;
+}
+
+.user-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0 45px 0;
+}
+
+.user-control h3{
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  text-transform: capitalize;
+}
+
+.user-control .blacklist-activate{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.blacklist-activate button{
+  padding: 13px 16px;
+  border-radius: 8px;  
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.blacklist-activate button:first-child{
+  border: 1px solid #E4033B;
+  color: #E4033B;
+}
+
+.blacklist-activate button:last-child{
+  border: 1px solid #39CDCC;
+  color: #39CDCC;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+.dashboard-main .profile-cont{
+  padding: 30px 30px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #213F7D0F;
+  box-shadow: 3px 5px 20px #0000000A;
+}
+
+.profile-cont .user-info{
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.user-info .user-avatar{
+  width: 100px;
+  height: 100px;
+  background-color: #21407d29;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info .user-name{
+  padding: 15px 30px 15px 0;
+  color: #213F7D;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+}
+
+.user-name p:last-child{
+  color: #545F7D;  
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.user-info .user-tier{
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-left: 1px solid #545f7d33;
+  border-right: 1px solid #545f7d33;
+}
+
+.user-tier p{
+  color: #545F7D;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+}
+.user-tier .tier-star{
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.user-info .user-amount{
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  color: #213F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.user-amount p:last-child{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profile-cont .info-tabs ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-tabs ul li{
+  padding: 0 25px 10px;
+  color: #000000CC;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-tabs ul li:hover{
+  border-bottom: 2px solid #39CDCC;
+  color: #39CDCC;
+}
+
+
+
+
+/* ----------------------------------------------------------------------- */
+
+.dashboard-main .about-cont{
+  padding: 30px;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #213F7D0F;
+  box-shadow: 3px 5px 20px #0000000A;
+}
+
+.about-cont .about-section{
+  border-bottom: 1px solid #21407d1a;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.about-section .about-section-title{
+  color: #213F7D;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about-section .about-details{
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  row-gap: 30px;
+  column-gap: 50px;
+}
+
+.about-personal .about-details{
+  grid-template-columns: repeat(5, max-content);
+  column-gap: 90px;
+}
+
+.about-details .details-item{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  white-space: nowrap;
+}
+
+.about-details .details-item dt{
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+  
+.about-details .details-item dd{
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.about-details .details-item .details-smallcap{
+  text-transform: lowercase;
+}
+
+.about-cont .about-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: none;
+}
