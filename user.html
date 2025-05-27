@@ -17,18 +17,23 @@
       <img src="/image/lockup-logo.svg" alt="lockup-logo">
     </a>
 
-    <div class="search">
-      <input type="text">
-      <label>Search for anything</label>
-      <div class="search-icon">
-        <ion-icon name="search-outline"></ion-icon>
-      </div>
-    </div>
+    <form role="search" action="#" class="search">
+        <input placeholder="" type="text">
+        <label>Search for anything</label>
+        <button class="search-icon">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+    </form>
 
     <div class="user-section">
-      <a href="#">Docs</a>
+      <a href="NotFound.html">Docs</a>
 
-      <ion-icon name="notifications-outline"></ion-icon>
+      <div class="user-notification">
+        <ion-icon class="user-notificationIcon" name="notifications-outline"></ion-icon>
+        <span class="user-notificationBadge">
+          <p class="notification-badgeNum">+9</p>
+        </span>
+      </div>
 
       <div class="user-profile">
         <div class="avatar-cont">

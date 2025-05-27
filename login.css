@@ -101,13 +101,16 @@ main{
   font-family: "Roboto", sans-serif;
   transform: translateY(-50%);
   pointer-events: none;
-  transition: opacity .5s ease-in-out;
-  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .login-form input:focus~label,
 .login-form input:valid~label{
   opacity: 0;
+}
+
+.login-form input:placeholder-shown~label{
+  opacity: 1;
 }
 
 .input-box input{

@@ -33,7 +33,7 @@ header{
   padding: 30px 20px;
   background-color: #fff;
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   box-shadow: 5px 0 20px #0000000a;
 }
 
@@ -47,7 +47,7 @@ header .search{
   overflow: hidden;
 }
 
-header input{
+.search input{
   width: 100%;
   height: 100%;
   outline: none;
@@ -56,7 +56,7 @@ header input{
   background: transparent;
 }
 
-header label{
+.search label{
   position: absolute;
   top: 50%;
   left: 20px;
@@ -65,6 +65,17 @@ header label{
   font-size: 14px;
   font-weight: 400;
   font-family: "Work Sans", sans-serif;
+  transition: opacity .3s ease-in-out;
+  pointer-events: none;
+}
+
+.search input:focus~label,
+.search input:valid~label{
+  opacity: 0;
+}
+
+.search input:placeholder-shown~label{
+  opacity: 1;
 }
 
 header .search-icon{
@@ -78,6 +89,11 @@ header .search-icon{
   align-items: center;
   background-color: #39CDCC;
   transform: translateY(-50%);
+  cursor: pointer;
+}
+
+header .search-icon:hover{
+  background-color: #2FB3B2;
 }
 
 .search-icon ion-icon{
@@ -94,18 +110,94 @@ header .user-section{
 }
 
 .user-section a{
-  text-decoration: underline;
   font-size: 16px;
   color: #213F7D;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  padding: 0 5px;
 }
 
-.user-section>ion-icon{
+.user-section a::after{
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #213F7D;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s ease-in-out;
+}
+
+.user-section a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.user-section .user-notification{
+  position: relative;
+}
+
+.user-notification .user-notificationIcon{
   font-size: 30px;
   color: #213F7D;
   --ionicon-stroke-width: 30px;
 }
+
+.user-notification .user-notificationBadge{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #39CDCC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+
+}
+
+.user-notification .notification-badgeNum{
+  font-size: 8px;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color: #fff;
+}
+
+
+.user-notification .user-notificationIcon:hover{
+  animation: ring 1s ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes ring {
+  0%{
+    transform: rotate(0);
+  }
+  15%{
+    transform: rotate(15deg);
+  }
+  30%{
+    transform: rotate(-10deg);
+  }
+  45%{
+    transform: rotate(10deg);
+  }
+  60%{
+    transform: rotate(-6deg);
+  }
+  75%{
+    transform: rotate(4deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
 
 .user-profile{
   display: flex;
@@ -119,7 +211,12 @@ header .user-section{
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 .user-profile p{
   font-family: "Roboto", sans-serif;
@@ -127,9 +224,6 @@ header .user-section{
   font-weight: 500;
   font-size: 16px;
 }
-
-
-
 
 
 
@@ -162,7 +256,7 @@ aside.sidebar::-webkit-scrollbar{
   font-size: 16px;
   font-weight: 400;
   font-family: "Work Sans", sans-serif;
-  color: rgba(33, 64, 125, 0.6);
+  color: #21407d99;
   padding-left: 30px;
 }
 
@@ -190,8 +284,6 @@ aside.sidebar::-webkit-scrollbar{
   background-color: rgba(57, 205, 205, 0.06);
   border-left: 5px solid #39CDCC;
 }
-
-
 
 .logout{
   padding: 20px 0;
