@@ -112,7 +112,7 @@
   display: none;
 }
 
-.title-row .filter-cont.active{
+.title-row th:hover .filter-cont{
   display: block;
   position: absolute;
   left: -15px;
@@ -126,6 +126,10 @@
   text-transform: capitalize;
   transition: .5s;
   z-index: 9999999;
+}
+
+.title-row th:hover .filter-contLast{
+  left: -30px;
 }
 
 .filter-cont .input-box{
@@ -157,6 +161,16 @@
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  pointer-events: none;
+}
+
+.input-box div input:focus~label,
+.input-box div input:valid~label{
+  opacity: 0;
+}
+
+.input-box div input:placeholder-shown~label{
+  opacity: 1;
 }
 
 .input-box div ion-icon{
@@ -253,11 +267,11 @@
   display: none;
 }
 
-.body-row .details-cont.active{
+.body-row td:hover .details-cont{
   display: block;
   position: absolute;
-  top: 20px;
-  right: -50px;
+  top: 45px;
+  right: -20px;
   width: 180px;
   padding: 20px;
   border: 1px solid #213F7D0F;
